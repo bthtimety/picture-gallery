@@ -1,0 +1,78 @@
+* {
+    font-family: "Amatic SC", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* убирает смещение картинки при появлении скрола */
+html {
+    margin-right: calc(-1 * (100vw - 100%));
+    overflow-x: hidden;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content__header {
+    margin-top: 100px;
+}
+
+.content__header h1 {
+    font-size: 70px;
+}
+
+.content__button-container {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 14px 20px;
+}
+
+.content__loader {
+    display: none;
+    margin-top: 80px;
+    width: 50px;
+    height: 50px;
+    border: 8px solid #000000;
+    border-top: 8px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.content__image-container {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.content__image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
