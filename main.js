@@ -1,7 +1,8 @@
 const buttonLoad = document.querySelector(".content__button-load");
 const buttonDelete = document.querySelector(".content__button-delete");
-const loader = document.getElementById("loader");
 const contentImageContainer = document.querySelector(".content__image-container");
+
+const loader = document.getElementById("loader");
 
 const URL = "https://dog.ceo/api/breeds/image/random/20";
 
